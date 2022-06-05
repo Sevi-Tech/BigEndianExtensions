@@ -1,12 +1,10 @@
 ﻿namespace BigEndianExtensions
 {
-	public abstract class EndianTools
+	internal static class EndianTools
 	{
-		public bool IsBigEndian { get; protected set; } = false;
-
-		protected byte[] GetBytes(byte[] input)
+		internal static byte[] GetBytes(byte[] input, bool isBigEndian)
 		{
-			if (!IsBigEndian)
+			if (!isBigEndian)
 			{
 				return input;
 			}
