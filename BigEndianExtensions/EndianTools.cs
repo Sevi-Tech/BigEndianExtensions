@@ -2,19 +2,17 @@
 {
 	internal static class EndianTools
 	{
-		internal static byte[] GetBytes(byte[] input, bool isBigEndian)
+		internal static byte[] GetBytes(ReadOnlySpan<byte> input, bool isBigEndian)
 		{
-			if (!isBigEndian)
+			int size = input.Length;
+			Span<byte> buffer = stackalloc byte[size];
+			input.CopyTo(buffer);
+			if (isBigEndian)
 			{
-				return input;
+				buffer.Reverse(); 
 			}
 
-			int size = input.Length;
-			byte[] buffer = new byte[size];
-			Array.Copy(input, buffer, size);
-			Array.Reverse(buffer);
-
-			return buffer;
+			return buffer.ToArray();
 		}
 	}
 }
