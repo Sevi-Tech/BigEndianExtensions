@@ -1,7 +1,7 @@
-﻿using System.Text;
-
-namespace BigEndianExtensions.IO
+﻿namespace Sevi.BigEndianExtensions.IO
 {
+	using System.Text;
+
 	public class EndianBinaryWriter : BinaryWriter, IIsEndian
 	{
 		public bool IsBigEndian { get; set; }

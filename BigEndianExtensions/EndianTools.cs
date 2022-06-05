@@ -1,4 +1,4 @@
-﻿namespace BigEndianExtensions
+﻿namespace Sevi.BigEndianExtensions
 {
 	internal static class EndianTools
 	{
@@ -9,7 +9,7 @@
 			input.CopyTo(buffer);
 			if (isBigEndian)
 			{
-				buffer.Reverse(); 
+				buffer.Reverse();
 			}
 
 			return buffer.ToArray();

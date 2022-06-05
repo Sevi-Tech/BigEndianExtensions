@@ -1,4 +1,4 @@
-﻿namespace BigEndianExtensions
+﻿namespace Sevi.BigEndianExtensions
 {
 	internal interface IIsEndian
 	{
