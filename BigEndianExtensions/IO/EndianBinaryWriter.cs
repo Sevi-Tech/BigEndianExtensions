@@ -1,5 +1,7 @@
 ﻿namespace Sevi.BigEndianExtensions.IO
 {
+	using System;
+	using System.IO;
 	using System.Text;
 
 	public class EndianBinaryWriter : BinaryWriter, IIsEndian
