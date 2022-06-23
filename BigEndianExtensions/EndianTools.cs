@@ -1,5 +1,7 @@
 ﻿namespace Sevi.BigEndianExtensions
 {
+	using System;
+
 	internal static class EndianTools
 	{
 		internal static byte[] GetBytes(ReadOnlySpan<byte> input, bool isBigEndian)
