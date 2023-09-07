@@ -6,7 +6,7 @@
 
 	public class EndianBinaryWriter : BinaryWriter, IIsEndian
 	{
-		public bool IsBigEndian { get; set; }
+		public bool IsBigEndian { get; }
 
 		public EndianBinaryWriter(Stream input, bool isBigEndian) : this(input, isBigEndian, Encoding.UTF8)
 		{
